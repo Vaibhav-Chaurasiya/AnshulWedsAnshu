@@ -11,3 +11,4 @@ Names, events, venue, family, phones, gallery list (add photos there), music pat
 ## RSVP
 - WhatsApp: set `rsvp.whatsappNumber` (left empty = pending).
 - Online submit: set `rsvp.endpointUrl` to a backend that accepts JSON POST. Without it the form reports that nothing was stored.
+vv
