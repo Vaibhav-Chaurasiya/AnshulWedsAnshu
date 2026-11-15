@@ -1,0 +1,10 @@
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}.d2{transition-delay:.2s}.d3{transition-delay:.4s}
+.envelope .flap{transition:transform 1s ease}.envelope.open .flap{transform:rotateX(180deg)}.envelope.open{animation:lift 1s .3s ease forwards}
+@keyframes lift{to{transform:translateY(-18px) scale(1.06);opacity:.85}}
+.intro-card>*{animation:rise .9s both}.intro-card>*:nth-child(2){animation-delay:.2s}.intro-card>*:nth-child(3){animation-delay:.4s}.intro-card>*:nth-child(n+4){animation-delay:.6s}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}}
+.music.playing .bars i{animation:eq .9s ease-in-out infinite}.bars i:nth-child(2){animation-delay:.2s!important}.bars i:nth-child(3){animation-delay:.4s!important}
+@keyframes eq{50%{height:16px}}
+.close-msg{animation:glow 5s ease-in-out infinite alternate}@keyframes glow{to{text-shadow:0 0 22px rgba(197,164,119,.6)}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}

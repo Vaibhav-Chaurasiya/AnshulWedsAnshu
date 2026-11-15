@@ -1,0 +1,17 @@
+@media (max-width:900px){
+ .burger{display:flex}
+ #menu{position:fixed;inset:0 0 0 auto;width:min(80vw,320px);background:var(--ivory);flex-direction:column;padding:5rem 1.6rem;gap:0;transform:translateX(100%);transition:transform .4s;box-shadow:-10px 0 30px rgba(0,0,0,.15)}
+ #menu.show{transform:none}#menu a{padding:1rem 0;border-bottom:1px solid var(--champ);font-size:1.05rem}
+ .hero{grid-template-columns:1fr;padding-top:5.5rem;text-align:center}.hero-text{justify-items:center}
+ .venue{grid-template-columns:1fr}.arrow{rotate:90deg;justify-self:center}
+}
+@media (max-width:700px){
+ .profiles,.families{grid-template-columns:1fr}
+ .ev{grid-template-columns:1fr;gap:.3rem}.ph-b{margin-top:1.5rem}
+ .hero-photos{gap:.6rem}.btn{width:100%}.row .btn,.phones .btn{flex:1 1 100%}.hero-text .btn{width:auto}
+ .cd div{padding:.8rem .1rem}.cd span{font-size:.62rem;letter-spacing:.02em}
+ .music{flex-direction:row}
+}
+@media (max-width:360px){.brand{font-size:1.2rem}.lang{padding:0 .6rem}.intro-msg{font-size:.92rem}.intro-card{gap:.5rem}.envelope{width:130px}}
+@media (max-height:620px) and (max-width:900px){#intro{align-items:start;overflow:auto}.envelope{display:none}}
+@media (min-width:1600px){:root{--max:1320px}}

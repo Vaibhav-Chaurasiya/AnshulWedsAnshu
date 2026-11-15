@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dr. Anshul &amp; Anshu — Wedding Invitation</title>
+<meta name="description" content="You are warmly invited to the wedding of Dr. Anshul Rajput (Dimpi) and Anshu Rajput (Shalu) on 12 December 2026, Najibabad.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dr. Anshul &amp; Anshu — Wedding Invitation">
+<meta property="og:description" content="Two Souls, One Beautiful Journey. 12 December 2026.">
+<meta property="og:image" content="public/assets/groom-portrait.png">
+<meta name="theme-color" content="#F7F1E8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Mukta:wght@300;400;600&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/animations.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="locked">
+<canvas id="petals" aria-hidden="true"></canvas>
+
+<div id="intro" role="dialog" aria-label="Wedding invitation">
+  <button class="skip" id="skipBtn" data-i18n="skip">Skip</button>
+  <div class="intro-card">
+    <div class="envelope" id="envelope"><div class="flap"></div><div class="seal">ॐ</div></div>
+    <p class="ganesh" data-i18n="ganesh"></p>
+    <h1 class="intro-names"><span data-cfg="groom.short">Dr. Anshul</span> <small data-cfg="groom.nick">(Dimpi)</small>
+      <em data-i18n="weds">Weds</em>
+      <span data-cfg="bride.short">Anshu</span> <small data-cfg="bride.nick">(Shalu)</small></h1>
+    <p class="gold-date" data-cfg="dateLabel">12 December 2026</p>
+    <p class="intro-msg" data-i18n="invite"></p>
+    <button class="btn" id="openBtn" data-i18n="open">Open Invitation</button>
+  </div>
+</div>
+
+<header class="nav" id="nav">
+  <a href="#home" class="brand">A &amp; A</a>
+  <nav id="menu" aria-label="Main">
+    <a href="#home" data-i18n="nav_home"></a><a href="#story" data-i18n="nav_story"></a><a href="#events" data-i18n="nav_events"></a>
+    <a href="#family" data-i18n="nav_family"></a><a href="#gallery" data-i18n="nav_gallery"></a><a href="#venue" data-i18n="nav_venue"></a><a href="#rsvp" data-i18n="nav_rsvp"></a>
+  </nav>
+  <button class="lang" id="langBtn" data-i18n="lang">हिन्दी</button>
+  <button class="burger" id="burger" aria-expanded="false" data-i18n-aria="menu" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-photos">
+    <figure class="ph ph-g reveal"><img data-photo="groom" data-alt="groom.nick" alt="" decoding="async"><span class="mono">A</span></figure>
+    <figure class="ph ph-b reveal d2"><img data-photo="bride" data-alt="bride.nick" alt="" decoding="async"><span class="mono">A</span></figure>
+  </div>
+  <div class="hero-text">
+    <p class="eyebrow" data-i18n="ganesh"></p>
+    <h2 data-i18n="hero_h">Two Souls, One Beautiful Journey</h2>
+    <p class="names"><span data-cfg="groom.short"></span> &amp; <span data-cfg="bride.short"></span></p>
+    <p class="gold-date" data-cfg="dateLabel"></p>
+    <p class="lead" data-i18n="hero_p"></p>
+    <a class="btn" href="#events" data-i18n="nav_events"></a>
+  </div>
+</section>
+
+<section id="story" class="sec">
+  <h2 class="sec-h reveal" data-i18n="story_h"></h2><div class="divider"></div>
+  <div class="profiles">
+    <article class="profile reveal"><figure class="ph"><img data-photo="groom" data-alt="groom.nick" alt="" loading="lazy" decoding="async"><span class="mono">A</span></figure>
+      <p class="eyebrow" data-i18n="groom_role"></p><h3><span data-cfg="groom"></span> <small data-cfg="groom.nick"></small></h3>
+      <p><span data-i18n="story_g"></span> <span data-cfg="groom.parents"></span></p></article>
+    <article class="profile reveal d2"><figure class="ph"><img data-photo="bride" data-alt="bride.nick" alt="" loading="lazy" decoding="async"><span class="mono">A</span></figure>
+      <p class="eyebrow" data-i18n="bride_role"></p><h3><span data-cfg="bride"></span> <small data-cfg="bride.nick"></small></h3>
+      <p><span data-i18n="story_b"></span> <span data-cfg="bride.parents"></span></p></article>
+  </div>
+</section>
+
+<section id="countdown" class="sec dark">
+  <h2 class="sec-h reveal" data-i18n="cd_h"></h2>
+  <div class="cd" id="cd" role="timer" aria-live="off">
+    <div><b id="cdD">0</b><span data-i18n="days"></span></div><div><b id="cdH">0</b><span data-i18n="hours"></span></div>
+    <div><b id="cdM">0</b><span data-i18n="minutes"></span></div><div><b id="cdS">0</b><span data-i18n="seconds"></span></div>
+  </div>
+  <p class="cd-done" id="cdDone" hidden data-i18n="cd_done"></p>
+</section>
+
+<section id="events" class="sec">
+  <h2 class="sec-h reveal" data-i18n="events_h"></h2><div class="divider"></div>
+  <div class="timeline" id="timeline"></div>
+</section>
+
+<section id="family" class="sec tint">
+  <h2 class="sec-h reveal" data-i18n="family_h"></h2><div class="divider"></div>
+  <div class="families">
+    <article class="fam reveal"><p class="eyebrow" data-i18n="groom_fam"></p><h3><span data-cfg="groom"></span> <small data-cfg="groom.nick"></small></h3>
+      <p><span data-i18n="story_g"></span> <span data-cfg="groom.parents"></span></p></article>
+    <article class="fam reveal d2"><p class="eyebrow" data-i18n="bride_fam"></p><h3><span data-cfg="bride"></span> <small data-cfg="bride.nick"></small></h3>
+      <p><span data-i18n="story_b"></span> <span data-cfg="bride.parents"></span></p>
+      <p class="muted"><span data-i18n="residence"></span>: <span data-cfg="bride.residence"></span></p></article>
+  </div>
+</section>
+
+<section id="gallery" class="sec">
+  <h2 class="sec-h reveal" data-i18n="gallery_h"></h2><div class="divider"></div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section id="venue" class="sec tint">
+  <h2 class="sec-h reveal" data-i18n="venue_h"></h2><div class="divider"></div>
+  <div class="venue">
+    <div class="vcard reveal"><p class="eyebrow" data-i18n="start"></p><h3 data-cfg="venue.baraatStart"></h3></div>
+    <div class="arrow" aria-hidden="true">➜</div>
+    <div class="vcard reveal d2"><p class="eyebrow" data-i18n="dest"></p><h3 data-cfg="venue.name"></h3><p id="addr" data-cfg="venue.address"></p>
+      <div class="row"><a class="btn" id="mapsLink" target="_blank" rel="noopener" data-i18n="dir"></a><button class="btn ghost" id="copyBtn" data-i18n="copy"></button></div>
+      <p class="status" id="copyMsg" role="status"></p></div>
+  </div>
+</section>
+
+<section id="rsvp" class="sec">
+  <h2 class="sec-h reveal" data-i18n="rsvp_h"></h2><div class="divider"></div>
+  <form id="rsvpForm" class="form reveal" novalidate>
+    <label><span data-i18n="f_name"></span><input name="name" type="text" autocomplete="name" required><em class="err" data-for="name"></em></label>
+    <label><span data-i18n="f_phone"></span><input name="phone" type="tel" inputmode="numeric" autocomplete="tel" maxlength="14" required><em class="err" data-for="phone"></em></label>
+    <label><span data-i18n="f_guests"></span><input name="guests" type="number" min="1" max="20" value="1" required><em class="err" data-for="guests"></em></label>
+    <fieldset><legend data-i18n="f_att"></legend>
+      <label class="radio"><input type="radio" name="att" value="yes"><span data-i18n="yes"></span></label>
+      <label class="radio"><input type="radio" name="att" value="no"><span data-i18n="no"></span></label><em class="err" data-for="att"></em></fieldset>
+    <label><span data-i18n="f_msg"></span><textarea name="msg" rows="3" maxlength="400"></textarea></label>
+    <div class="row"><button class="btn" type="submit" data-i18n="confirm"></button><button class="btn ghost" type="button" id="waBtn" data-i18n="wa"></button></div>
+    <p class="status" id="rsvpMsg" role="status" aria-live="polite"></p>
+  </form>
+</section>
+
+<section id="contact" class="sec dark">
+  <h2 class="sec-h reveal" data-i18n="contact_h"></h2>
+  <div class="contact reveal"><h3 data-cfg="host.name"></h3><p data-cfg="host.address"></p>
+    <div class="phones" id="phones"></div></div>
+</section>
+
+<section id="closing" class="closing">
+  <p class="close-msg reveal" data-i18n="close_h"></p>
+  <p class="names big reveal d2"><span data-cfg="groom.short"></span> &amp; <span data-cfg="bride.short"></span></p>
+  <p class="gold-date reveal d3" data-cfg="dateLabel"></p>
+</section>
+</main>
+
+<div class="music" id="music">
+  <button id="playBtn" data-i18n-aria="music_on" aria-label="Play music"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span></button>
+  <button id="muteBtn" data-i18n-aria="mute" aria-label="Mute">♪</button>
+  <span class="status" id="musicMsg" role="status"></span>
+</div>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true">
+  <button class="lb-x" id="lbX" data-i18n-aria="closeb" aria-label="Close">✕</button>
+  <button class="lb-n lb-p" id="lbP" data-i18n-aria="prev" aria-label="Previous">‹</button>
+  <img id="lbImg" alt=""><button class="lb-n lb-nx" id="lbN" data-i18n-aria="next" aria-label="Next">›</button>
+</div>
+
+<script src="js/wedding-config.js"></script><script src="js/language.js"></script><script src="js/countdown.js"></script>
+<script src="js/music.js"></script><script src="js/gallery.js"></script><script src="js/rsvp.js"></script><script src="js/main.js"></script>
+</body>
+</html>
